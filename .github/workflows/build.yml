@@ -28,7 +28,7 @@ jobs:
       - uses: jurplel/install-qt-action@v2
         with:
           version: 5.15.0
-          arch: win64_mingw73
+          arch: win64_mingw81
           mirror: 'http://mirrors.ocf.berkeley.edu/qt/'
       - name: vcvars
         shell: cmd

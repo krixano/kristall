@@ -17,7 +17,7 @@ kristall: build/kristall
 
 build/kristall: src/*
 	mkdir -p build
-	cd build && qmake ../src/kristall.pro && $(MAKE)
+	cd build && qmake ../src/kristall.pro -platform win32-g++ && $(MAKE)
 
 install: kristall
 	# Install icons

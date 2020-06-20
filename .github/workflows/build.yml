@@ -29,11 +29,6 @@ jobs:
       - name: vcvars
         shell: cmd
         run: |
-          pushd .
           call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
-          popd
-          cd build
           qmake ../src/kristall.pro
-          nmake release
-          cd release
-          mt.exe -manifest Hello.exe.manifest -outputresource:Hello.exe
+          make release

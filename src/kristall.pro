@@ -31,6 +31,19 @@ win32-msvc {
     LIBS -= -lcrypto
     LIBS += "C:\Program Files\OpenSSL\lib\libcrypto.lib"
     INCLUDEPATH += "C:\Program Files\OpenSSL\include"
+    QT -= svg
+}
+
+win32-g++ {
+    QMAKE_CFLAGS -= -Wno-unused-parameter
+    QMAKE_CXXFLAGS -= -Wno-unused-parameter
+
+    QMAKE_CFLAGS += /permissive-
+    QMAKE_CXXFLAGS += /permissive-
+    LIBS -= -lcrypto
+    LIBS += "C:\Program Files\OpenSSL\lib\libcrypto.lib"
+    INCLUDEPATH += "C:\Program Files\OpenSSL\include"
+    QT -= svg
 }
 
 android: include(/home/felix/projects/android-hass/android-sdk/android_openssl/openssl.pri)

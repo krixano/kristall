@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: jurplel/install-qt-action@v2
         with:
-          arch: win32_mingw53
+          arch: win64_mingw73
       - name: vcvars
         shell: cmd
         run: |
